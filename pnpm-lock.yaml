@@ -67,6 +67,9 @@ devDependencies:
   react-dom:
     specifier: ^18.3.1
     version: 18.3.1(react@18.3.1)
+  sass:
+    specifier: ^1.77.6
+    version: 1.77.6
   tailwindcss:
     specifier: ^3.4.4
     version: 3.4.4
@@ -75,7 +78,7 @@ devDependencies:
     version: 5.5.3
   vite:
     specifier: ^5.3.1
-    version: 5.3.2(@types/node@20.14.9)
+    version: 5.3.2(@types/node@20.14.9)(sass@1.77.6)
 
 packages:
 
@@ -1219,7 +1222,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.24.7)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.3.2(@types/node@20.14.9)
+      vite: 5.3.2(@types/node@20.14.9)(sass@1.77.6)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2159,7 +2162,7 @@ packages:
       esbuild: 0.21.5
       magic-string: 0.30.10
       picocolors: 1.0.1
-      vite: 5.3.2(@types/node@20.14.9)
+      vite: 5.3.2(@types/node@20.14.9)(sass@1.77.6)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2952,6 +2955,10 @@ packages:
   /ignore@5.3.1:
     resolution: {integrity: sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==}
     engines: {node: '>= 4'}
+    dev: true
+
+  /immutable@4.3.6:
+    resolution: {integrity: sha512-Ju0+lEMyzMVZarkTn/gqRpdqd5dOPaz1mCZ0SH3JV6iFw81PldE/PEB1hWVEA288HPt4WXW8O7AWxB10M+03QQ==}
     dev: true
 
   /import-fresh@3.3.0:
@@ -4101,6 +4108,16 @@ packages:
       truncate-utf8-bytes: 1.0.2
     dev: true
 
+  /sass@1.77.6:
+    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
+    dev: true
+
   /sax@1.4.1:
     resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
 
@@ -4633,7 +4650,7 @@ packages:
     dev: true
     optional: true
 
-  /vite@5.3.2(@types/node@20.14.9):
+  /vite@5.3.2(@types/node@20.14.9)(sass@1.77.6):
     resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -4665,6 +4682,7 @@ packages:
       esbuild: 0.21.5
       postcss: 8.4.39
       rollup: 4.18.0
+      sass: 1.77.6
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
